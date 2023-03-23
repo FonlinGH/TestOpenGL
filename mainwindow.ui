@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1200</width>
+    <height>800</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <item>
+     <widget class="MyOpenGLWidget" name="openGLWidget"/>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1200</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menu">
+    <property name="title">
+     <string>绘制</string>
+    </property>
+    <addaction name="actiontriangle"/>
+    <addaction name="actionrect"/>
+    <addaction name="actioncube"/>
+    <addaction name="actionWireFrame"/>
+    <addaction name="actionnonWireFrame"/>
+    <addaction name="actionclear"/>
+   </widget>
+   <addaction name="menu"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="actiontriangle">
+   <property name="text">
+    <string>三角形</string>
+   </property>
+  </action>
+  <action name="actionWireFrame">
+   <property name="text">
+    <string>线框模式</string>
+   </property>
+  </action>
+  <action name="actionnonWireFrame">
+   <property name="text">
+    <string>填充模式</string>
+   </property>
+  </action>
+  <action name="actionclear">
+   <property name="text">
+    <string>清空画板</string>
+   </property>
+  </action>
+  <action name="actionrect">
+   <property name="text">
+    <string>矩形</string>
+   </property>
+  </action>
+  <action name="actioncube">
+   <property name="text">
+    <string>立方体</string>
+   </property>
+  </action>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>MyOpenGLWidget</class>
+   <extends>QOpenGLWidget</extends>
+   <header location="global">myopenglwidget.h</header>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>
